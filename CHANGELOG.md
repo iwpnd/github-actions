@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/iwpnd/github-actions/compare/v1.0.0...v1.0.1) (2025-07-17)
+
+### 🐛 Bug Fixes
+
+* hello action ([76a8cca](https://github.com/iwpnd/github-actions/commit/76a8cca01953ff0949fe8bfc0a2eaf1902356f24))
+
 ## 1.0.0 (2025-07-17)
 
 ### ✨ Features
