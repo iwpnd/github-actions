@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/iwpnd/github-actions/compare/v1.0.1...v1.1.0) (2026-03-22)
+
+### ✨ Features
+
+* add mise-install, update release ([5ed9d10](https://github.com/iwpnd/github-actions/commit/5ed9d10ca5d70258ef76136df21ee71cf029aec9))
+
 ## [1.0.1](https://github.com/iwpnd/github-actions/compare/v1.0.0...v1.0.1) (2025-07-17)
 
 ### 🐛 Bug Fixes
