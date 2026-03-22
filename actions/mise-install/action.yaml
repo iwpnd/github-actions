@@ -1,0 +1,35 @@
+name: "mise install"
+description: "
+  Install mise and tools from mise.toml or from cache.
+  This action can also be used as a drop-in replacement for asdf actions, as mise will
+  also read from .tool-versions files.
+
+  NOTE: This action requires that the repository has been checked out to access mise.toml
+  or .tool-versions. If mise.toml contains dependencies that require building from source
+  with Go, ensure actions/setup-go is run before this action or mise.toml includes go.
+  "
+inputs:
+  github-token:
+    description: "Github API Token"
+    required: true
+  environment:
+    description: "mise environment to activate, see: https://mise.jdx.dev/environments/"
+    required: false
+    default: ""
+
+runs:
+  using: "composite"
+  steps:
+    - name: set MISE_ENV
+      if: inputs.environment != ''
+      shell: bash
+      run: |
+        echo "MISE_ENV=${{ inputs.environment }}" >> "$GITHUB_ENV"
+
+    - name: install mise
+      uses: jdx/mise-action@v4
+      with:
+        install: true
+        cache: true
+        log_level: debug
+        github_token: ${{ inputs.github-token }}
