@@ -1,0 +1,13 @@
+default_stages: [pre-commit, pre-push]
+default_install_hook_types: [pre-commit, prepare-commit-msg, commit-msg]
+repos:
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: v0.19.1
+    hooks:
+      - id: gitlint
+        stages: [commit-msg]
+  - repo: https://github.com/iwpnd/pre-commit-devmoji
+    rev: v0.1.2
+    hooks:
+      - id: devmoji
+        stages: [prepare-commit-msg]
