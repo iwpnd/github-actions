@@ -23,7 +23,7 @@ jobs:
 
       - name: tag and release
         id: tag-and-release
-        uses: ../../actions/tag-and-release
+        uses: ./actions/tag-and-release
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
