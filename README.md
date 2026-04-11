@@ -43,7 +43,6 @@ Analyzes commit history to automatically tag and create releases using semantic 
 
 **Prerequisites:**
 - A `.releaserc.json` file must exist in your repository root
-- example in [strava/planet](https://github.com/strava/planet/blob/main/.releaserc.json)
 
 **Usage:**
 ```yaml
